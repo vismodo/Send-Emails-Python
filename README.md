@@ -7,11 +7,11 @@ This is a tutorial to make your own app that sends emails.
 
 2. Open ['Final Code.py'](https://github.com/VismayaAtreya/Send-Emails-Python/blob/master/Final%20Code.py) in [IDLE](https://docs.python.org/3/library/idle.html).
 
-![openwith.png](https://github.com/VismayaAtreya/Send-Emails-Python/blob/master/User%20Guide%20Images/openwith.png)
+![openwith.png](https://github.com/VismayaAtreya/Send-Emails-Python/blob/master/User%20Guide%20Images/runmod.png)
 
 3. Click on **Run -> Run Module** and wait for a tkinter window to pop up with the title **'Login'**.
 
-![runmod.png](https://github.com/VismayaAtreya/Send-Emails-Python/blob/master/User%20Guide%20Images/runmod.png)
+![runmod.png](https://github.com/VismayaAtreya/Send-Emails-Python/blob/master/User%20Guide%20Images/openwith.png)
 
 4. In the this window,  fill in your email address and password in the blank entries provided. (entry is a single-line text box)
 
