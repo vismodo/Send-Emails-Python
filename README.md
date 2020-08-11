@@ -7,15 +7,23 @@ This is a tutorial to make your own app that sends emails.
 
 2. Open ['Final Code.py'](https://github.com/VismayaAtreya/Send-Emails-Python/blob/master/Final%20Code.py) in [IDLE](https://docs.python.org/3/library/idle.html).
 
+![openwith.png](https://github.com/VismayaAtreya/Send-Emails-Python/blob/master/User%20Guide%20Images/openwith.png)
+
 3. Click on **Run -> Run Module** and wait for a tkinter window to pop up with the title **'Login'**.
+
+![runmod.png](https://github.com/VismayaAtreya/Send-Emails-Python/blob/master/User%20Guide%20Images/runmod.png)
 
 4. In the this window,  fill in your email address and password in the blank entries provided. (entry is a single-line text box)
 
+![login.png](https://github.com/VismayaAtreya/Send-Emails-Python/blob/master/User%20Guide%20Images/login.png)
+
 5. Select your SMTP Server from the dropdown menu. It is usually the word that is followed by the '@' in your email address.
 
-6. Once you are sure that all the details are correct, click on 'Login'. You will be connected to your server when you send your email, not yet
+6. Once you are sure that all the details are correct, click on 'Login'. You will be connected to your server when you send your email, not yet.
 
-7. Now, the first entry is for you to fill in your recipients' email addresses. separate the email addresses with a whitespace.
+7. Now, you should see a new window with the title **'Send Mail'**. The first entry is for you to fill in your recipients' email addresses. separate the email addresses with a whitespace.
+
+![email.png](https://github.com/VismayaAtreya/Send-Emails-Python/blob/master/User%20Guide%20Images/email.png)
 
 8. The second entry is for you to type the subject of your email.
 
