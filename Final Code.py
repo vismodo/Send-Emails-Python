@@ -59,7 +59,7 @@ def sendmail():
             server.login(sender_email, password)
             message = message_box.get('1.0', 'end-1c')
             receiver_email = receiver_email_entry.get().split(' ')
-            server.sendmail(sender_email, receiver_email, ('Subject: ' + subject_box.get() + '\n' + message) + '\n \nSent with Python smtplib and ssl modules' )
+            server.sendmail(sender_email, receiver_email, ('Subject: ' + subject_box.get() + '\n' + message) + '\n \nSent with Python smtplib and ssl modules (App at: https://github.com/VismayaAtreya/Send-Emails-Python)' )
     except Exception as e:
         showinfo('Error while sending', e)
 login = tk.Tk()
