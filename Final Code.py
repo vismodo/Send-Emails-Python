@@ -36,7 +36,7 @@ def signin():
     global receiver_email_entry
     reciever_label = tk.Label(mail_window, text = 'Recipients: (Separate with spaces)')
     receiver_email_entry = tk.Entry(mail_window)
-    message_label = tk.Label(mail_window, text = 'Message (First Line Subject)')
+    message_label = tk.Label(mail_window, text = 'Message:')
     message_box = ScrolledText(mail_window)
     subject_label = tk.Label(mail_window, text = 'Subject:')
     subject_box = tk.Entry(mail_window)
