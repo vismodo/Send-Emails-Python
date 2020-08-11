@@ -1,7 +1,7 @@
 import smtplib, ssl
 import tkinter as tk
 from tkinter.scrolledtext import ScrolledText
-
+from tkinter.messagebox import showinfo
 def signin():
     global sender_email
     global password
@@ -26,8 +26,8 @@ def signin():
         smtp_server = 'plus.smtp.mail.yahoo.com'
         port = 465
     else:
-        smtp_server = 'smtp.gmail.com'
-        port = 587
+        smtp_server = 'imap.mail.me.com'
+        port = 993
     login.destroy()
     mail_window = tk.Tk()
     mail_window.title('Send Mail')
@@ -36,7 +36,7 @@ def signin():
     global receiver_email_entry
     reciever_label = tk.Label(mail_window, text = 'Recipients: (Separate with spaces)')
     receiver_email_entry = tk.Entry(mail_window)
-    message_label = tk.Label(mail_window, text = 'Message:')
+    message_label = tk.Label(mail_window, text = 'Message')
     message_box = ScrolledText(mail_window)
     subject_label = tk.Label(mail_window, text = 'Subject:')
     subject_box = tk.Entry(mail_window)
@@ -50,16 +50,18 @@ def signin():
     send_button.pack()
     mail_window.mainloop()
 def sendmail():
-    context = ssl.create_default_context()
-    with smtplib.SMTP(smtp_server, port) as server:
-        server.ehlo()  # Can be omitted
-        server.starttls(context=context)
-        server.ehlo()  # Can be omitted
-        server.login(sender_email, password)
-        message = message_box.get('1.0', 'end-1c')
-        receiver_email = receiver_email_entry.get().split(' ')
-        server.sendmail(sender_email, receiver_email, ('Subject: ' + subject_box.get() + '\n' + message) + '\n \nSent with Python smtplib and ssl modules' )
-
+    try:
+        context = ssl.create_default_context()
+        with smtplib.SMTP(smtp_server, port) as server:
+            server.ehlo()
+            server.starttls(context=context)
+            server.ehlo()
+            server.login(sender_email, password)
+            message = message_box.get('1.0', 'end-1c')
+            receiver_email = receiver_email_entry.get().split(' ')
+            server.sendmail(sender_email, receiver_email, ('Subject: ' + subject_box.get() + '\n' + message) + '\n \nSent with Python smtplib and ssl modules' )
+    except Exception as e:
+        showinfo('Error while sending', e)
 login = tk.Tk()
 login.title('Login')
 username_label = tk.Label(login, text = 'Your username:')
@@ -81,3 +83,4 @@ servers_menu.config(width=40, font=('Helvetica', 12))
 servers_menu.pack()
 login_button.pack()
 login.mainloop()
+
